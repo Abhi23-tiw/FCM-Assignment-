@@ -2,8 +2,6 @@
 
 ## 📲 React Native Notification App
 
-A forward-thinking, Firebase Cloud Messaging (FCM) powered mobile notification system built with **React Native**, featuring:
-
 * 🔔 Push Notification handling (foreground, background, and killed states)
 * 🆕 Manual OTA update checks via `expo-updates`
 * 📥 Local stateful storage of notifications with **read/unread** logic
