@@ -19,7 +19,7 @@ export default function App() {
   const [isUpdating, setIsUpdating] = useState(false);
   const [notifications, setNotifications] = useState([]);
 
-  // 🔔 Request permission
+  
   async function requestUserPermission() {
     const authStatus = await messaging().requestPermission();
     const enabled =
@@ -27,11 +27,11 @@ export default function App() {
       authStatus === messaging.AuthorizationStatus.PROVISIONAL;
 
     if (enabled) {
-      console.log('✅ Notification permission granted:', authStatus);
+      console.log(' Notification permission granted:', authStatus);
     }
   }
 
-  // 🔁 Update check
+  
   async function checkAndUpdateApp() {
     try {
       setIsUpdating(true);
@@ -40,10 +40,10 @@ export default function App() {
         await Updates.fetchUpdateAsync();
         await Updates.reloadAsync();
       } else {
-        Alert.alert('✅ Up to date', 'You are using the latest version.');
+        Alert.alert(' Up to date', 'You are using the latest version.');
       }
     } catch (error) {
-      Alert.alert('❌ Update Error', 'Could not fetch updates.');
+      Alert.alert(' Update Error', 'Could not fetch updates.');
       console.error(error);
     } finally {
       setIsUpdating(false);
@@ -55,10 +55,10 @@ export default function App() {
 
     messaging()
       .getToken()
-      .then(token => console.log('📲 FCM Token:', token))
-      .catch(error => console.error('❌ Token error:', error));
+      .then(token => console.log(' FCM Token:', token))
+      .catch(error => console.error(' Token error:', error));
 
-    // App launched from background/quit
+   
     messaging()
       .getInitialNotification()
       .then(remoteMessage => {
