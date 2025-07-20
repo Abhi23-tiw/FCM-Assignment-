@@ -1,6 +1,6 @@
----
-
 ## 📲 React Native Notification App
+
+A forward-thinking, Firebase Cloud Messaging (FCM) powered mobile notification system built with **React Native**, featuring:
 
 * 🔔 Push Notification handling (foreground, background, and killed states)
 * 🆕 Manual OTA update checks via `expo-updates`
@@ -60,7 +60,13 @@ npm install
 
 ---
 
+---
 
+## 🧪 Development
+
+```bash
+npx react-native run-android
+```
 
 To test push notifications:
 
@@ -97,17 +103,7 @@ firebase.js               # FCM token handling (optional separation)
 assets/                   # UI background images
 ```
 
----
 
-## 🛡️ Permissions
-
-App requests the following permissions:
-
-* `POST_NOTIFICATIONS`
-* `RECEIVE_NOTIFICATIONS`
-* `INSTALL_SHORTCUT` (for badge handling)
-
----
 
 ## 🔗 Dependencies
 
@@ -130,3 +126,4 @@ App requests the following permissions:
 * 📬 Notification categories & filters
 * 📱 iOS badge integration
 * 🧪 Unit + E2E testing (Jest + Detox)
+
